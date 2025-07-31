@@ -8,6 +8,7 @@ const {message} = storeToRefs(store)
 </script>
 
 <template>
+  <SpeedInsights />
   <!-- <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
