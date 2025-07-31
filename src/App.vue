@@ -5,6 +5,8 @@ import { storeToRefs } from 'pinia';
 const store = useMessageStore()
 const {message} = storeToRefs(store)
 // import HelloWorld from './components/EventCard.vue'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
+
 </script>
 
 <template>
