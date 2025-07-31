@@ -19,8 +19,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <h1>Student List</h1>
-  <div class="students">
+  <h1 class="text-2xl font-bold mb-6">Student List</h1>
+  <div class="flex flex-col items-center space-y-4">
     <StudentCard
       v-for="student in students"
       :key="student.id"
@@ -31,10 +31,10 @@ onMounted(async () => {
   </div>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 .students {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-</style>
+</style> -->

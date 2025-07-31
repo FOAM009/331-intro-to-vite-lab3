@@ -44,10 +44,10 @@ defineProps<{
   <!-- <div class="greetings"></div> -->
   <!-- <div class="event-class"> -->
   <!-- <RouterLink to ="/event/5928101"> -->
-    <RouterLink class="event-link" :to ="{ name: 'event-detail-view', params: { id: event.id } }">
-    <div class="event-card">
-      <h2>{{ event.title }}</h2>
-      <span>@{{ event.time }} on {{ event.date }}</span>
+    <RouterLink class="no-underline text-gray-800" :to ="{ name: 'event-detail-view', params: { id: event.id } }">
+    <div class="cursor-pointer border border-gray-600 p-[20px] w-[250px] mb-[18] hover:scale-101 hover:shadow-sp">
+      <h2 class="text-lg font-semibold">{{ event.title }}</h2>
+      <span class="text-sm text-gray-600">@{{ event.time }} on {{ event.date }}</span>
 
       <EventDetails :event="event" />
     </div>
@@ -79,7 +79,7 @@ h3 {
   }
 }
 </style> -->
-<style scoped>
+<!-- <style scoped>
 .event-card{
   padding: 20px;
   width: 250px;
@@ -97,4 +97,4 @@ h3 {
   color: #2c3e50;
 }
 </style>
-
+ -->

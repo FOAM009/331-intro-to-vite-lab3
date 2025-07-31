@@ -63,8 +63,8 @@ onMounted(async () => {
     <TheWelcome />
   </main> -->
   <!-- <div class="home"> -->
-  <h1>Events For Good</h1>
-  <div class="events">
+  <h1 class="text-2xl font-bold mb-6">Events For Good</h1>
+  <div class="flex flex-col items-center space-y-4">
     <EventCard
       v-for="event in events"
       :key="event.id"
@@ -72,23 +72,24 @@ onMounted(async () => {
     />
   </div>
   <div class="pagination">
-    <RouterLink id="page-prev" :to="{ name: 'event-list-view', query: { page: page - 1 , perPage: perPage}}"
+    <RouterLink class="text-blue-600 hover:underline" :to="{ name: 'event-list-view', query: { page: page - 1 , perPage: perPage}} "
     rel="prev"
     v-if="page != 1"
     >&#60; Prev Page</RouterLink>>
 
-    <RouterLink id="page-next" :to="{ name: 'event-list-view', query: { page: page + 1 , perPage: perPage}}"
+    <RouterLink class="text-blue-600 hover:underline ml-auto" :to="{ name: 'event-list-view', query: { page: page + 1 , perPage: perPage}}"
     rel="next"
     v-if="hasNextPage"
     >Next Page &#62;</RouterLink>>
   </div>
 </template>
-<style>
-.events{
+
+<!-- <style>
+/* .events{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 .pagination{
   display: flex;
   width: 290px;
@@ -104,4 +105,4 @@ onMounted(async () => {
 #page-next{
   text-align: right;
 }
-</style>
+</style> -->

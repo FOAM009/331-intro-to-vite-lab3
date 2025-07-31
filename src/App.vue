@@ -22,25 +22,28 @@ const {message} = storeToRefs(store)
   </header>
 
   <RouterView /> -->
-
-  <div id="layout">
+  <!-- <div id="layout"> -->
+    <!-- ใช้ Tailwind จะไม่ต้องเขียน CSS แยกเอง → แค่ใส่ class บน element เลย
+    ทำให้โค้ด CSS สั้นลง สะอาด และดูแลง่าย
+    เหมาะกับ UI component ที่มี style ซ้ำ ๆ หรือเล็ก ๆ -->
+  <div class="text-center font-sans text-gray-700 antialias" >
     <header>
-      <div id="flashMessage" v-if="message">
+      <div id="flashMessage" class="animate-pulse bg-yellow-200 p-4 mb-4 rounded" v-if="message">
         <h4>{{ message }}</h4>
       </div>
       <div class="wrapper">
-        <nav>
+        <nav class="flex justify-center space-x-4 py-6 text-sm">
           <!-- <RouterLink to="/">Home</RouterLink> -->
           <!-- <RouterLink to="/">Event</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/students">Student</RouterLink>  -->
-          <RouterLink :to="{ name: 'event-list-view', query: { page: 1, perPage: 2 } }">2 / page</RouterLink> |
-          <RouterLink :to="{ name: 'event-list-view', query: { page: 1, perPage: 3 } }">3 / page</RouterLink> |
-          <RouterLink :to="{ name: 'event-list-view', query: { page: 1, perPage: 4 } }">4 / page</RouterLink> |
-          <RouterLink :to="{ name: 'event-list-view', query: { page: 1, perPage: 6 } }">6 / page</RouterLink>
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'event-list-view', query: { page: 1, perPage: 2 } }">2 / page</RouterLink> |
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'event-list-view', query: { page: 1, perPage: 3 } }">3 / page</RouterLink> |
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'event-list-view', query: { page: 1, perPage: 4 } }">4 / page</RouterLink> |
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'event-list-view', query: { page: 1, perPage: 6 } }">6 / page</RouterLink>
           |
-          <RouterLink :to="{ name: 'about' }">About</RouterLink>
-          <RouterLink :to="{ name: 'Students' }">Student</RouterLink>
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'about' }">About</RouterLink>
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'Students' }">Student</RouterLink>
         </nav>
       </div>
     </header>
@@ -49,7 +52,7 @@ const {message} = storeToRefs(store)
 </template>
 
 <!-- <style scoped> -->
-<style>
+<!-- <style>
 /* header {
   line-height: 1.5;
   max-height: 100vh;
@@ -75,13 +78,13 @@ nav a.router-link-exact-active:hover {
   background-color: transparent;
 } */
 
-#layout{
+/* #layout{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
+} */
 
 nav{
   padding: 30px;
@@ -144,4 +147,4 @@ nav a {
  #flashMessage{
   animation: yellofade 3s ease-in-out;
  }
-</style>
+</style> -->
