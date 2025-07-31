@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-    import { DefineProps, withDefaults } from 'vue';
+    import { withDefaults } from 'vue';
     const props = withDefaults(
         defineProps<{
             resource: String
