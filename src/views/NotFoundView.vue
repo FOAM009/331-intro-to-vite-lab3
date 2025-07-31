@@ -6,10 +6,10 @@
 </template>
 
 <script setup lang="ts">
-    import { withDefaults } from 'vue';
+    import { defineProps, withDefaults } from 'vue';
     const props = withDefaults(
         defineProps<{
-            resource: String
+            resource: string
         }>(),
         {
             resource: 'page'
